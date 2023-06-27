@@ -1,0 +1,133 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.Container {
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: auto;
+}
+.heading {
+  text-align: center;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+}
+.input {
+  margin: 10px;
+}
+.addToTask {
+  margin: 0 10px 10px 10px;
+  background: #0f9eb1;
+  border: none;
+  height: 1.7rem;
+  color: white;
+  border-radius: 0.4rem;
+   cursor: pointer;
+}
+.listBox {
+  display: flex;
+  flex-direction: column;
+}
+.btns {
+  display: flex;
+  justify-content: space-between;
+}
+.all {
+  width: 25vw;
+  margin: 0 10px 10px 10px;
+  background: #0f9eb1;
+  border: none;
+  height: 1.7rem;
+  color: white;
+  border-radius: 0.4rem;
+   cursor: pointer;
+}
+.done {
+  width: 25vw;
+  margin: 0 10px 10px 10px;
+  background: #0f9eb1;
+  border: none;
+  height: 1.7rem;
+  color: white;
+  border-radius: 0.4rem;
+   cursor: pointer;
+}
+.notDone {
+  width: 25vw;
+  margin: 0 10px 10px 10px;
+  background: #0f9eb1;
+  border: none;
+  height: 1.7rem;
+  color: white;
+  border-radius: 0.4rem;
+   cursor: pointer;
+}
+
+.data {
+  display: flex;
+  height: 2rem;
+  width: 100%;
+  border: 1px solid gray;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+.productName {
+  padding: 0 14px;
+}
+.checked{
+  text-decoration: line-through;
+}
+.productBtns {
+  padding: 14px;
+}
+.checkBox:checked {
+  background: #0f9eb1;
+}
+.editBtn {
+  align-items: center;
+  background: rgb(255, 230, 0);
+  border-radius: .3rem;
+  border: none;
+  color: #000000;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.deleteBtn {
+  align-items: center;
+  background: red;
+  border-radius: .3rem;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+   cursor: pointer;
+}
+.deleteAll {
+    display: block;
+    margin: 1rem auto;
+    border: 1px solid #0f9eb1;
+    padding: .4rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    color: #000000;
+    font-weight: 600;
+    transition: all .3s;
+}
+.deleteAll:hover {
+    display: block;
+    margin: 1rem auto;
+    border: 1px silid #0f9eb1;
+    color: #fff;
+    padding: .4rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    background:  #0f9eb1;
+}
