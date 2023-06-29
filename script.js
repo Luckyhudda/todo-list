@@ -19,7 +19,7 @@ if(finalData){
      <div class="productBtns">
      <input type='checkbox' onclick='updatestatus(this)' class='checkBox' id='${index}'  ${isDone}/>
      <button class="editBtn">Edit</button>
-     <button class="deleteBtn">Delete</button>
+     <button class="deleteBtn" onclick = 'deleteProduct(${index})'>Delete</button>
      </div>
      </div>`;
   })
@@ -40,6 +40,7 @@ function updatestatus(checkBox){
   localStorage.setItem("list", JSON.stringify(finalData));
 }
 
+// Add data in Local Storage and update UI  with the help of ADD NEW button...
 addBtn.addEventListener("click", function () {
   let value = input.value;
   if (input.value) {
@@ -55,3 +56,39 @@ addBtn.addEventListener("click", function () {
     input.value = "";
   }
 });
+
+// Add data in Local Storage and update UI  on Enter click...
+document.addEventListener('keyup', e =>{
+  if(e.key == 'Enter'){
+     let value = input.value;
+     if (input.value) {
+       finalData = localStorage.getItem("list")
+         ? JSON.parse(localStorage.getItem("list"))
+         : [];
+
+       list = { product: value, status: "panding" };
+       finalData.push(list);
+       localStorage.setItem("list", JSON.stringify(finalData));
+       // display list
+       displayUI();
+       input.value = "";
+     }
+  }
+})
+
+
+// Delete target product from local Storage and Update UI
+function deleteProduct(productID){
+  finalData.splice(productID,1);
+   localStorage.setItem("list", JSON.stringify(finalData));
+   displayUI();
+}
+
+
+// Delete all data from local Storage and Update UI
+deleteAll.addEventListener('click', function(){
+  finalData.splice(0,finalData.length)
+  localStorage.setItem("list", JSON.stringify(finalData));
+  displayUI()
+})
+
